@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleanor Moseley - web Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 2rem 80px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #667eea;
+            
+        }
+
+        #h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold; 
+            text-decoration: none; 
+        }
+        #h2:hover {
+            text-decoration: underline; 
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: #e0e7ff;
+            color: #667eea;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        .resume-section {
+            background: #f9fafb;
+            padding: 3rem 2rem;
+        }
+
+        .resume-content {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .resume-item {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .resume-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .resume-item h4 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+            font-weight: normal;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-category h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            color: #666;
+        }
+
+        .skill-category li {
+            padding: 0.3rem 0;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2 style="color: #9caefe">Eleanor Moseley</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Hello, I'm Eleanor Moseley</h1>
+        <p>Computer Science Student | Passionate about building innovative solutions and solving complex problems through code</p>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <a href="https://github.com/EleanorMoseley/gmailAutoSort" target="_blank" id="h2">Gmail AppScript Auto Sort</a>
+                <p>An Apps Script program to run advanced custom Gmail sorting procedures for a clean inbox, such as time delay archiving for one-time codes.</p>
+                <div class="tech-tags">
+                    <span class="tag">Javascript</span>
+                    <span class="tag">AppScript</span>
+                    <span class="tag">Gmail Service API</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>QuackHacks Hackathon 2025</h3>
+                <p>Developed a space-shooter game utilizing ray casting and particle systems for University of Oregon's 36-hour annual hackathon.</p>
+                <div class="tech-tags">
+                    <span class="tag"> C#</span>
+                    <span class="tag">Unity</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Game Jam - Game Dev Club Winter 25</h3>
+                <p>"Scratch It Up" - a minesweeper-style roguelike about scratch cards and cats.</p>
+                <div class="tech-tags">
+                    <span class="tag">GML</span>
+                    <span class="tag">GameMaker</span>
+                    <span class="tag">C++</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="resume-section">
+        <div class="resume-content">
+            <h2>Resume</h2>
+            
+            <div class="resume-item">
+                <h3>Education</h3>
+                <h4>Bachelor of Science in Computer Science</h4>
+                <p><strong>University of Oregon</strong> | Expected Graduation: May 2026</p>
+                <p>GPA: 3.75/4.0</p>
+                <p>Relevant Coursework: OOP, Operating Systems, Database Systems, Computer Organization, Unix/C++</p>
+            </div>
+
+            <div class="resume-item">
+                <h3>Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Languages</h4>
+                        <ul>
+                            <li>C/C++</li>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>SQL</li>
+                            <li>Java</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Frameworks</h4>
+                        <ul>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>Django</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools</h4>
+                        <ul>
+                            <li>Git/GitHub</li>
+                            <li>VS Code</li>
+                            <li>Docker</li>
+                            <li>Linux</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="resume-item">
+                <h3>Experience</h3>
+                <h4>UI/UX Developer</h4>
+                <p><strong>New York University</strong> | May - Dec 2024</p>
+                <ul style="margin-left: 2rem; color: #666;">
+                    <li>Created comprehensie interfae designs for the new launch of the General Engineering wepbage, supporting distinct student, teaching assistant, and admin/professor access levels</li>
+                    <li>Developed branding guidelines for use across the development team to ensure consistency and cohesion to EG and NYU's isual standards</li>
+                    <li>Performed A/B testing and collected user feedback for data-driven design development</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Eleanor Moseley. All rights reserved.</p>
+        <p>
+            <a href="mailto:emoseley@uoregon.edu">Email</a> | 
+            <a href="https://github.com/EleanorMoseley" target="_blank">GitHub</a> | 
+            <a href="https://linkedin.com/in/eleanor-moseley" target="_blank">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>
